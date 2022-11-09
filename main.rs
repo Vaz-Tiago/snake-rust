@@ -1,18 +1,16 @@
 
 fn main() {
-  let custom_num = 98_000;    // _ is just for formatting
-  let hex_num = 0xfa;         // hexadecimal number
-  let bin_num = 0b0010_1011;  // binary number
-  let byte_num = b'A';         // byte number
+  let tup:(&str, f32, u8)  = ("Hello", 3.12, 1);
+  println!("{}", tup.1);
 
-  println!("{}", custom_num); // 98000
-  println!("{}", hex_num);    // 250
-  println!("{}", bin_num);    // 43
-  println!("{}", byte_num);   // 65
+  let (string, float, number) = tup;
+  println!("{}", string);
+  println!("{}", float);
+  println!("{}", number);
 
-  let float_num: f32 = 3.14;
-  let float_num_2: f64 = 3.2334327489;
+  let x = [1, 5, 9, 10];
+  println!("{}", x[2]);
 
-  println!("{}", float_num);
-  println!("{}", float_num_2);
+  let y = [2; 4]; // [2,2,2,2]
+  println!("{}", y[1]);
 }
